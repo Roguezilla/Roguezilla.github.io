@@ -2,5 +2,6 @@ body {
   background-color: black;
   color: black;
   font-family: Tahoma;
+  background-repeat: no-repeat;
   background-size: cover;
 }
