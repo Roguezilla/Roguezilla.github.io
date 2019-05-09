@@ -1,6 +1,5 @@
 class Particle {
 	constructor() {
-		this.wall;
         this.rays = [];
         this.pos = createVector(0, 0);
 		for (let a = 0; a < 360; a += 10) {
@@ -24,13 +23,11 @@ class Particle {
                     if(dist < max) {
                         closest = pt;
                         max = dist;
-						this.wall = wall;
                     }
                 }
             }
 			if(closest) {
 				line(this.pos.x, this.pos.y, closest.x, closest.y, 8, 8);
-				this.wall.show(255, 0, 0);
 			}
         }
     }

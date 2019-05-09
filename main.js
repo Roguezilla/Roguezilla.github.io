@@ -2,7 +2,9 @@ let walls = [];
 let p;
 
 function setup() {
-	createCanvas(windowWidth, windowHeight);
+	let cnv = createCanvas(windowWidth, windowHeight);
+  	cnv.position(0, 0);
+  	cnv.style("z-index", "-1");
 	for (let i = 0; i < 10; i++) {
     	let x1 = random(width);
     	let x2 = random(width);
@@ -15,11 +17,17 @@ function setup() {
 }
 
 function draw() {
-	background(0);
+	clear();
+	line(0, 0, width, 0);
+  	line(width, 0, width, height);
+  	line(width, height, 0, height);
+ 	line(0, height, 0, 0);
 	for(let wall of walls) {
 		wall.show(255, 255, 255);
 	}
-	p.setPos(mouseX, mouseY);
-	p.show();
-	p.testHit(walls);
+	if(mouseX > 0 && mouseY > 0 && mouseX < windowWidth && mouseY < windowHeight) {	
+		p.setPos(mouseX, mouseY);
+		p.show();
+		p.testHit(walls); 
+  	}
 }
