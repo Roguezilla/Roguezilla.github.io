@@ -31,3 +31,15 @@ function draw() {
 		p.testHit(walls); 
   	}
 }
+
+function windowResized() {
+  	resizeCanvas(windowWidth, windowHeight);
+  	walls = [];
+  	for (let i = 0; i < 10; i++) {
+    	let x1 = random(width);
+    	let x2 = random(width);
+    	let y1 = random(height);
+    	let y2 = random(height);
+    	walls.push(new Boundary(x1, y1, x2, y2));
+  	}
+}
