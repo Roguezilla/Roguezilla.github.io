@@ -18,7 +18,6 @@ class Particle {
             for(let wall of walls) {
                 const pt = ray.cast(wall);
                 if (pt) {
-                    fill(255);
                     let dist = p5.Vector.dist(this.pos, pt);
                     if(dist < max) {
                         closest = pt;
@@ -27,16 +26,9 @@ class Particle {
                 }
             }
 			if(closest) {
+                stroke(255);
 				line(this.pos.x, this.pos.y, closest.x, closest.y, 8, 8);
 			}
-        }
-    }
-
-    show() {
-        fill(255);
-        //ellipse(this.pos.x, this.pos.y, 4);
-        for(let ray of this.rays) {
-            ray.show();
         }
     }
 }

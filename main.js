@@ -27,7 +27,6 @@ function draw() {
 	}
 	if(mouseX > 0 && mouseY > 0 && mouseX < windowWidth && mouseY < windowHeight) {	
 		p.setPos(mouseX, mouseY);
-		p.show();
 		p.testHit(walls); 
   	}
 }
