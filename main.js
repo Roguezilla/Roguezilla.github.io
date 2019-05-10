@@ -1,32 +1,36 @@
 let walls = [];
 let p;
+let objs = [];
 
 function setup() {
-  let cnv = createCanvas(windowWidth, windowHeight);
-  cnv.position(0, 0);
-  cnv.style("z-index", "-1");
-	for (let i = 0; i < 10; i++) {
-  	let x1 = random(width);
-  	let x2 = random(width);
-  	let y1 = random(height);
-  	let y2 = random(height);
-  	walls.push(new Boundary(x1, y1, x2, y2));
-  }	
-  p = new Particle();
+	createCanvas(windowWidth, windowHeight);
+	for (let i = 0; i < 5; i++) {
+    	let x1 = random(width);
+    	let x2 = random(width);
+    	let y1 = random(height);
+    	let y2 = random(height);
+    	walls.push(new Boundary(x1, y1, x2, y2, true));
+  	}
+  	
+  	p = new Particle();
+
+  	for (let i = 0; i < 5; i++) {
+    	let x1 = random(width);
+    	let y1 = random(height);
+    	objs.push(new Obj(x1, y1, 20));
+  	}
 }
 
 function draw() {
-	clear();
-	line(0, 0, width, 0);
-  line(width, 0, width, height);
-  line(width, height, 0, height);
- 	line(0, height, 0, 0);
+	background(0);
 	for(let wall of walls) {
 		wall.show(255, 255, 255);
 	}
-  
+	for(let obj of objs) {
+		obj.show()
+	}
 	p.setPos(mouseX, mouseY);
-	p.testHit(walls); 
+	p.testHit(walls);
 }
 
 function windowResized() {
@@ -37,6 +41,12 @@ function windowResized() {
   	let x2 = random(width);
   	let y1 = random(height);
   	let y2 = random(height);
-  	walls.push(new Boundary(x1, y1, x2, y2));
+  	walls.push(new Boundary(x1, y1, x2, y2, true));
+  }
+  objs = []
+  for (let i = 0; i < 5; i++) {
+    let x1 = random(width);
+    let y1 = random(height);
+    objs.push(new Obj(x1, y1, 20));
   }
 }
