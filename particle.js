@@ -1,8 +1,8 @@
 class Particle {
-	constructor() {
+    constructor() {
         this.rays = [];
         this.pos = createVector(0, 0);
-		for (let a = 0; a < 360; a += 0.5) {
+		for (let a = 0; a < 360; a += 10) {
             this.rays.push(new Ray(this.pos, radians(a)));
         }
 	}
@@ -18,7 +18,6 @@ class Particle {
             for(let wall of walls) {
                 const pt = ray.cast(wall);
                 if (pt) {
-                    fill(255);
                     let dist = p5.Vector.dist(this.pos, pt);
                     if(dist < max) {
                         closest = pt;
@@ -26,10 +25,10 @@ class Particle {
                     }
                 }
             }
-            if(closest) {
+			if(closest) {
                 stroke(255);
-                line(this.pos.x, this.pos.y, closest.x, closest.y, 8, 8);
-            }
+				line(this.pos.x, this.pos.y, closest.x, closest.y, 8, 8);
+			}
         }
     }
 }
