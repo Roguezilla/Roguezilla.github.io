@@ -1,5 +1,5 @@
 class Particle {
-	constructor() {
+    constructor() {
         this.rays = [];
         this.pos = createVector(0, 0);
 		for (let a = 0; a < 360; a += 10) {
