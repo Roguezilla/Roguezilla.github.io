@@ -1,5 +1,8 @@
 let walls = [];
 let p;
+let x = 1;
+let y = 1;
+let easing = 0.05;
 
 function setup() {
   let cnv = createCanvas(windowWidth, windowHeight);
@@ -24,8 +27,10 @@ function draw() {
 	for(let wall of walls) {
 		wall.show(255, 255, 255);
 	}
-  
-	p.setPos(mouseX, mouseY);
+
+	x += (mouseX - x) * easing;
+  y += (mouseY - y) * easing;
+	p.setPos(x, y);
 	p.testHit(walls); 
 }
 
