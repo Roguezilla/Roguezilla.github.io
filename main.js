@@ -12,11 +12,11 @@ function setup() {
 
 	console.log(isMobile)
 
-	if(isMobile == false) {
+	if(true) {
 		let cnv = createCanvas(windowWidth, windowHeight);
   		cnv.position(0, 0);
   		cnv.style("z-index", "-1");
-		for (let i = 0; i < 10; i++) {
+		for (let i = 0; i < isMobile ? 5 : 10; i++) {
   			let x1 = random(width);
   			let x2 = random(width);
   			let y1 = random(height);
@@ -28,7 +28,7 @@ function setup() {
 }
 
 function draw() {
-	if(isMobile == false) {
+	if(true) {
 		clear();
 		line(0, 0, width, 0);
 		line(width, 0, width, height);
@@ -46,10 +46,10 @@ function draw() {
 }
 
 function windowResized() {
-	if(isMobile == false) {
+	if(true) {
 		resizeCanvas(windowWidth, windowHeight);
   		walls = [];
-  		for (let i = 0; i < 10; i++) {
+  		for (let i = 0; i < isMobile ? 5 : 10; i++) {
   			let x1 = random(width);
   			let x2 = random(width);
   			let y1 = random(height);
