@@ -17,7 +17,7 @@ $(document).ready(function(){
         },
         mouseleave: function() {
             $("#discord_name").text("");
-            $(this).fadeIn()
+            $(this).show()
             $("#contacts").text("Contacts:")
         }
     });
@@ -29,7 +29,7 @@ $(document).ready(function(){
         },
         mouseleave: function() {
             $(this).text("");
-            $("#discord_img").fadeIn()
+            $("#discord_img").show()
             $("#contacts").text("Contacts:")
         },
         click: function() {
@@ -45,7 +45,7 @@ $(document).ready(function(){
         },
         mouseleave: function() {
             $("#mail").text("");
-            $(this).fadeIn()
+            $(this).show()
             $("#contacts").text("Contacts:")
         }
     });
@@ -57,7 +57,7 @@ $(document).ready(function(){
         },
         mouseleave: function() {
             $(this).text("");
-            $("#mail_img").fadeIn()
+            $("#mail_img").show()
             $("#contacts").text("Contacts:")
         },
         click: function() {
@@ -72,7 +72,7 @@ $(document).ready(function(){
         },
         mouseleave: function() {
             $("#gh").text("");
-            $(this).fadeIn()
+            $(this).show()
         }
     });
     $("#gh").on({
@@ -82,7 +82,7 @@ $(document).ready(function(){
         },
         mouseleave: function() {
             $(this).text("");
-            $("#gh_svg").fadeIn()
+            $("#gh_svg").show()
         }
     });
 
@@ -93,7 +93,7 @@ $(document).ready(function(){
         },
         mouseleave: function() {
             $("#steam").text("");
-            $(this).fadeIn()
+            $(this).show()
         }
     });
     $("#steam").on({
@@ -103,7 +103,7 @@ $(document).ready(function(){
         },
         mouseleave: function() {
             $(this).text("");
-            $("#steam_img").fadeIn()
+            $("#steam_img").show()
         }
     });
 });
