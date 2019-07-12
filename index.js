@@ -18,7 +18,8 @@ $(document).ready(function(){
             $(this).delay(15000).queue(function() {
                 $(this).find('img').toggle();
                 $("audio").attr("src", "cue.mp3");
-             });
+                $(this).dequeue();
+            });
         }
     });
 
