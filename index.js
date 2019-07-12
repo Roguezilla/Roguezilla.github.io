@@ -11,6 +11,25 @@ function copyToClipboard(elementId) {
 $(document).ready(function(){
     $('#background').fadeIn();
 
+    $("#changeImage").on({
+        click: function() {
+            $(this).find('img').toggle();
+        }
+    });
+
+    $("#logo_img").on({
+        click: function() {
+            $("audio").attr("src", "yes.mp3");
+        }
+    });
+
+    $("#gnome_gif").on({
+        click: function() {
+            $("audio").attr("src", "cue.mp3");
+        }
+    });
+
+
     $("#discord_img").on({
         mouseenter: function() {
             $("#discord_name").text("𝕣𝕠𝕘𝕦𝕖#0001");
@@ -23,6 +42,7 @@ $(document).ready(function(){
             $("#contacts").text("Contacts:")
         }
     });
+
     $("#discord_name").on({
         mouseenter: function() {
             $(this).text("𝕣𝕠𝕘𝕦𝕖#0001");
