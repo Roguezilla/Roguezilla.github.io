@@ -14,21 +14,13 @@ $(document).ready(function(){
     $("#changeImage").on({
         click: function() {
             $(this).find('img').toggle();
-        }
-    });
-
-    $("#logo_img").on({
-        click: function() {
             $("audio").attr("src", "yes.mp3");
+            $(this).delay(15000).queue(function() {
+                $(this).find('img').toggle();
+                $("audio").attr("src", "cue.mp3");
+             });
         }
     });
-
-    $("#gnome_gif").on({
-        click: function() {
-            $("audio").attr("src", "cue.mp3");
-        }
-    });
-
 
     $("#discord_img").on({
         mouseenter: function() {
