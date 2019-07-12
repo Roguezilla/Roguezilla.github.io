@@ -81,3 +81,19 @@ body {
     -ms-transform:  translate(0px,0px)  ;
   }
 }
+
+#custom p {
+  font-size: calc(16px + 0.5vw);
+}
+
+#custom a {
+  font-size: calc(12px + 0.5vw);
+}
+
+#custom img {
+  width: calc(12px + 0.5vw);
+}
+
+#custom svg {
+  width: calc(12px + 0.5vw);
+}

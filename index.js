@@ -15,7 +15,7 @@ $(document).ready(function(){
         click: function() {
             $(this).find('img').toggle();
             $("audio").attr("src", "yes.mp3");
-            $(this).delay(15000).queue(function() {
+            $(this).delay(16000).queue(function() {
                 $(this).find('img').toggle();
                 $("audio").attr("src", "cue.mp3");
                 $(this).dequeue();
