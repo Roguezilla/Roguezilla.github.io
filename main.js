@@ -11,8 +11,6 @@ function setup() {
 			isMobile = true;
 	}
 
-	console.log(isMobile)
-
 	if(isMobile == false) {
 		let cnv = createCanvas(windowWidth, windowHeight);
   		cnv.position(0, 0);
@@ -48,8 +46,8 @@ function draw() {
 }
 
 function windowResized() {
+	resizeCanvas(windowWidth, windowHeight);
 	if(isMobile == false) {
-		resizeCanvas(windowWidth, windowHeight);
   		walls = [];
   		for (let i = 0; i < 10; i++) {
   			let x1 = random(width);

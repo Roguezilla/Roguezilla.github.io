@@ -9,6 +9,8 @@ function copyToClipboard(elementId) {
 }
 
 $(document).ready(function(){
+    $('#background').fadeIn();
+
     $("#discord_img").on({
         mouseenter: function() {
             $("#discord_name").text("𝕣𝕠𝕘𝕦𝕖#0001");
