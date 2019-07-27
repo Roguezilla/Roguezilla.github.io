@@ -131,9 +131,24 @@ $(document).ready(function(){
         }
     });
 
+    $("#sc_downloader").on({
+        mouseenter: function() {
+            $("#tools").text("Click to be forwarded");
+        },
+        mouseleave: function() {
+            $("#tools").text("Tools:");
+        }
+    });
+
     $("#ig_downloader").on({
         click: function() {
             window.location.href= "ig_downloader.html";
+        }
+    });
+
+    $("#sc_downloader").on({
+        click: function() {
+            window.location.href= "sc_downloader.html";
         }
     });
 });
