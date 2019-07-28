@@ -22,6 +22,7 @@ $(document).ready(function() {
                 console.log(data["id"]);
                 $.get("https://cors-anywhere.herokuapp.com/" + "https://api.soundcloud.com/i1/tracks/{0}/streams?client_id={1}".format(data["id"], client_id), function(data) {
                     console.log(data["http_mp3_128_url"]);
+                    
                     document.getElementById("div1").innerHTML = "";
                     let br = document.createElement("br");
                     let link = document.createElement("a");

@@ -122,7 +122,7 @@ $(document).ready(function(){
         }
     });
 
-    $("#ig_downloader").on({
+    $("#instagram").on({
         mouseenter: function() {
             $("#tools").text("Click to be forwarded");
         },
@@ -131,7 +131,7 @@ $(document).ready(function(){
         }
     });
 
-    $("#sc_downloader").on({
+    $("#soundcloud").on({
         mouseenter: function() {
             $("#tools").text("Click to be forwarded");
         },
@@ -140,15 +140,15 @@ $(document).ready(function(){
         }
     });
 
-    $("#ig_downloader").on({
+    $("#instagram").on({
         click: function() {
-            window.location.href= "ig_downloader.html";
+            window.location.href= "instagram.html";
         }
     });
 
-    $("#sc_downloader").on({
+    $("#soundcloud").on({
         click: function() {
-            window.location.href= "sc_downloader.html";
+            window.location.href= "soundcloud.html";
         }
     });
 });
