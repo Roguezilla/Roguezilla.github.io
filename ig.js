@@ -1,3 +1,5 @@
+let clean = (array) => array.filter((v,i) => array.indexOf(v) === i)
+
 $(document).ready(function() {
     $("#logo_img").on({
         click: function() {
@@ -13,11 +15,7 @@ $(document).ready(function() {
                 try {
                     let pic_reg = /"display_url":(".*?")/g;
                     let pic_matches = data.match(pic_reg);
-                    if (pic_matches.length > 1) {
-                        if(pic_matches[0] == pic_matches[1]) {
-                            pic_matches.shift();
-                        }
-                    }
+                    clean(pic_matches);
                     for(match of pic_matches) {
                         let new_match = match.substr(15, match.length);
                         let new_match2 = new_match.slice(0, -1);
@@ -40,11 +38,7 @@ $(document).ready(function() {
                 try {
                     let vid_reg = /"video_url":(".*?")/g;
                     let vid_matches = data.match(vid_reg);
-                    if (vid_matches.length > 1) {
-                        if(vid_matches[0] == vid_matches[1]) {
-                            vid_matches.shift();
-                        }
-                    }
+                    clean(vid_matches);
                     for(match of vid_matches) {
                         let new_match = match.substr(13, match.length);
                         let new_match2 = new_match.slice(0, -1);
