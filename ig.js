@@ -1,5 +1,3 @@
-let clean = (array) => array.filter((v,i) => array.indexOf(v) === i)
-
 $(document).ready(function() {
     $("#logo_img").on({
         click: function() {
@@ -9,17 +7,18 @@ $(document).ready(function() {
 
     $("#submit").on({
         click: function() {
-            url_array = []
             $.get($("#url_input").val(), function(data) {
                 document.getElementById("div1").innerHTML = "";
                 try {
                     let pic_reg = /"display_url":(".*?")/g;
                     let pic_matches = data.match(pic_reg);
                     let unique_matches = [...new Set(pic_matches)];
+                    console.log("matches: " + pic_matches);
+                    console.log("unique: " + unique_matches);
                     for(match of unique_matches) {
                         let new_match = match.substr(15, match.length);
                         let new_match2 = new_match.slice(0, -1);
-                        console.log(new_match2);
+                        //console.log(new_match2);
 
                         let br = document.createElement("br");
                         let link = document.createElement("a");
