@@ -13,12 +13,12 @@ $(document).ready(function() {
                     let pic_reg = /"display_url":(".*?")/g;
                     let pic_matches = data.match(pic_reg);
                     let unique_matches = [...new Set(pic_matches)];
-                    console.log("matches: " + pic_matches);
-                    console.log("unique: " + unique_matches);
+                    console.log("Regex matches: " + pic_matches);
+                    console.log("Clean matches: " + unique_matches);
                     for(match of unique_matches) {
                         let new_match = match.substr(15, match.length);
                         let new_match2 = new_match.slice(0, -1);
-                        //console.log(new_match2);
+                        console.log(new_match2);
 
                         let br = document.createElement("br");
                         let link = document.createElement("a");
@@ -38,6 +38,8 @@ $(document).ready(function() {
                     let vid_reg = /"video_url":(".*?")/g;
                     let vid_matches = data.match(vid_reg);
                     let unique_matches = [...new Set(vid_matches)];
+                    console.log("Regex matches: " + vid_matches);
+                    console.log("Clean matches: " + unique_matches);
                     for(match of unique_matches) {
                         let new_match = match.substr(13, match.length);
                         let new_match2 = new_match.slice(0, -1);
