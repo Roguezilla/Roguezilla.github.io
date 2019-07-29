@@ -18,7 +18,6 @@ $(document).ready(function() {
                             pic_matches.shift();
                         }
                     }
-                    pic_matches.shift();
                     for(match of pic_matches) {
                         let new_match = match.substr(15, match.length);
                         let new_match2 = new_match.slice(0, -1);
