@@ -54,7 +54,7 @@ $(document).ready(function(){
 
     $("#mail_img").on({
         mouseenter: function() {
-            $("#mail").text("roguezilla@protonmail.com");
+            $("#mail").text("roguezilla0@gmail.com");
             $(this).hide()
             $("#contacts").text("Click to copy")
         },
@@ -66,7 +66,7 @@ $(document).ready(function(){
     });
     $("#mail").on({
         mouseenter: function() {
-            $(this).text("roguezilla@protonmail.com");
+            $(this).text("roguezilla0@gmail.com");
             $("#mail_img").hide()
             $("#contacts").text("Click to copy")
         },
