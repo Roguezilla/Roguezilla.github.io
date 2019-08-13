@@ -1,0 +1,102 @@
+body {
+	background-color: #FDFCFC;
+	color: #000000;
+	font-family: Georgia;
+	font-size: 12px;
+	height: 100%;
+    margin: 0 auto;
+}
+
+#sidebar {
+	border-right: 2px solid #EEEEEE;
+	color: #BBBBBB;
+	float: left;
+	font-size: 10px;
+	letter-spacing: 0.1em;
+	margin: 0 -1px 30px 0;
+	padding: 30px 30px 0 0;
+	position:fixed;
+	text-align: right;
+    width: 180px;
+}
+
+#content {
+	padding: 30px 0 0 30px;
+	width: 500px;
+}
+
+#container {
+	margin: 0 auto;
+	width: 741px; 
+}
+
+.search input {
+	background-color: transparent;
+	color: #bbbbbb;
+	font-family: Georgia;
+	letter-spacing: 0.1em;
+	outline: 0 none;
+	padding: 0;
+	text-align: left;
+	border: 1px solid #bbbbbb;
+	width: 200px;
+}
+
+.button {
+    background: transparent;
+	color: black;
+	border: 1px solid black;
+}
+
+.button:hover {
+	background: transparent;
+	color: black;
+}
+
+.button:active {
+	background: transparent;
+	color: black;
+}
+
+.post {
+	background-color: white;
+	padding: 10px;
+	font-size: 12px;
+	line-height: 19px;
+	width: 500px;
+	position:relative;
+	left: 200px;
+}
+
+.self {
+	height: 128px;
+    position: relative;
+}
+
+.frame {
+	position: absolute;
+	top: 0;
+    right: 0;
+    height: 128px;
+}
+
+.box {
+	display: flex;
+	align-items:center;
+ }
+
+.splitter {
+	border-top: 2px solid #EEEEEE;
+    padding-bottom: 10px;
+}
+
+.linklist {
+	border-top: 2px solid #EEEEEE;
+    padding-bottom: 10px;
+	text-transform: uppercase;
+}
+
+a:link, a:visited {
+	color: #2185B4;
+	text-decoration: none;
+}
