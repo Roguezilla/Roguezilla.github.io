@@ -12,6 +12,7 @@ $(document).ready(function() {
                     makeLink("Song", data["http_mp3_128_url"]);         
                 });             
             });
+            $("#url_input").val("");
         }
     });
 });

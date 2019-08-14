@@ -20,6 +20,7 @@ $(document).ready(function() {
                         makeLink("Video", link);
                     }
                 } catch(error) {}
+                $("#url_input").val("");
             });
         }
     });
