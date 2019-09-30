@@ -1,6 +1,6 @@
 body {
 	background-color: #FDFCFC;
-	color: #000000;
+	color: #111111;
 	font-family: Georgia;
 	font-size: 12px;
 	height: 100%;
@@ -9,7 +9,7 @@ body {
 
 #sidebar {
 	border-right: 2px solid #EEEEEE;
-	color: #BBBBBB;
+	color: #111111;
 	float: left;
 	font-size: 10px;
 	letter-spacing: 0.1em;
@@ -44,18 +44,18 @@ body {
 
 .button {
     background: transparent;
-	color: black;
-	border: 1px solid black;
+	color: #111111;
+	border: 1px solid #111111;
 }
 
 .button:hover {
 	background: transparent;
-	color: black;
+	color: #111111;
 }
 
 .button:active {
 	background: transparent;
-	color: black;
+	color: #111111;
 }
 
 .post {
