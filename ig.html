@@ -6,6 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>yare yare daze</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="ig.js"></script>
+        <script src="custom.js"></script>
         <style type="text/css">
             body {
                 background-color: #EEEEEE;
@@ -21,21 +23,31 @@
 
             h1,h2,h3 {
                 line-height: 1.2;
-                text-align: center;
             }
 
             a:link, a:visited {
 	            color: #2185B4;
 	            text-decoration: none;
             }
-            .h1 {
+
+            .form {
+                display: block;
+                text-align: center;
+            }
+            form {
+                display: inline-block;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: left;
+            }
+            .a {
                 text-align: center;
             }
         </style>
     </head>
     <body>
         <a title="" href="index.html"><img style="display: block; margin-left: auto; margin-right: auto;" src="logo.png"></a><br>
-        <img style="border-radius: 50%; height: 128px; float:left;" src="me.jpg">
+        <a title="" href="index.html"><img style="border-radius: 50%; height: 128px; float:left;" src="me.jpg"></a>
         <div style="transform: translateX(10px)">
             <a>hobbyist programmer, cartoon and anime enthusiast, starco fanfic connoisseur</a>
             <br><a>18 | 🇵🇹 🇺🇦 | ♂️</a>
@@ -47,10 +59,15 @@
             <img style="vertical-align:middle" src="mail.png" width=16><a> roguezilla0@gmail.com</a>
             <br><br><br>
         </div>
-        <h1>Tools</h1>
-        <div style="display: flex; justify-content: space-evenly;">
-            <a title="" href="sc.html"><img style="height: 128px; display: block; margin-left: auto; margin-right: auto; transform: translateY(-48px)" src="sc.png"></a>
-            <a title="" href="ig.html"><img style="height: 128px; display: block; margin-left: auto; margin-right: auto; transform: translateY(-48px)" src="ig.png"></a>
+        <div class="a"><a>Outputs direct link to the front picture.</a></div>
+        <div class="form">
+            <form action="/search" method="get">
+                <input id="url_input" type="text" value="" placeholder="POST URL"/>
+                <button id="submit" type="button" class="button">Submit</button>
+            </form>
         </div>
+        <div id="div1" style="text-align: center">
+                
+        </div> 
     </body>
 </html>

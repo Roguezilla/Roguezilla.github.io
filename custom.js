@@ -24,3 +24,8 @@ String.prototype.format = function() {
     }
     return formatted;
 };
+
+String.prototype.replaceAll = function(search, replacement) {
+    var target = this;
+    return target.replace(new RegExp(search, 'g'), replacement);
+};
