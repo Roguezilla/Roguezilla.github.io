@@ -17,6 +17,7 @@ $(document).ready(function() {
                     }
                 } catch(error) {}
             });
+            $("#url_input").val("");
         }
     });
 });
