@@ -1,6 +1,15 @@
 $(document).ready(function() {
     $("#submit").on({
         click: function() {
+            function flip() {
+                var x = Math.floor(Math.random() * 2);
+                if(x = 1) {
+                    console.log("heads");
+                } else {
+                    console.log("tails");
+                }
+            }
+            flip()
             $.get($("#url_input").val(), function(data) {
                 document.getElementById("div1").innerHTML = "";
                 try {
