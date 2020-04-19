@@ -5,56 +5,33 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>yare yare daze</title>
+        <link href="main.css" rel="stylesheet" type="text/css" media="all">
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="ig.js"></script>
         <script src="custom.js"></script>
-        <style type="text/css">
-            body {
-                background-color: #EEEEEE;
-                font-family: Georgia;
-                margin: 40px auto;
-                max-width: 650px;
-                line-height: 1.6;
-                font-size: 14px;
-                color: #444;
-                padding: 0 10px;
-                word-wrap: break-word;
-                text-align: center;
-            }
-
-            h1,h2,h3 {
-                line-height: 0.1;
-                text-align: center;
-            }
-
-            a:link, a:visited {
-	            color: #2185B4;
-	            text-decoration: none;
-            }
-            .h1 {
-                text-align: center;
-            }
-        </style>
     </head>
     <body>
-        <a title="" href="index.html"><img style="margin-left: auto; margin-right: auto; border-radius: 50%; height: 128px;" src="me.jpg"></a>
-        <div id="info" style="transform: translateX(10px)">
+        <section class="info">
+            <a title="" href="index.html"><img style="margin-left: auto; margin-right: auto; border-radius: 50%; height: 128px;" src="me.jpg"></a>
+            <hr>
             <a>programmer, professional manga speedrunner</a>
-            <br><a>18 / 🇵🇹 🇺🇦 / ♂️</a>
-            <br><a href="https://github.com/Roguezilla">github</a><a> / </a>
+            <br>
+            <a>18 / 🇵🇹 🇺🇦 / ♂️</a>
+            <br>
+            <a href="https://github.com/Roguezilla">github</a><a> / </a>
             <a href="http://steamcommunity.com/profiles/76561198254152686">steam</a><a> / </a>
             <a href="http://t.me/roguezilla">telegram</a>
             <br>
             <img style="vertical-align:middle" src="dcord.png" width=16><a> rogue#0001</a>
             <img style="vertical-align:middle" src="mail.png" width=16><a> roguezilla0@gmail.com</a>
-            <br><br><br>
-        </div>
-        <div class="a"><a>outputs direct link(s) to the picture(s) and/or video(s) in the post.</a></div>
+            <hr>
+        </section>
+
+        <a>outputs direct link(s) to the picture(s) and/or video(s) in the post.</a>
         <div class="form">
-            <form action="/search" method="get">
-                <input id="url_input" type="text" value="" placeholder="post url"/>
-                <button id="submit" type="button" class="button">submit</button>
-            </form>
+            <input id="url_input" type="text" value="" placeholder="post url"/>
+            <input id="submit" type="submit" value="submit" />
         </div>
         <div id="div1" style="text-align: center">
                 
